@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Anta;
+}
+
+body {
+    --bgColor: white;
+    --fontColor: rgb(0, 0, 0);
+    --navColor: white;
+    --borderNav: black;
+    background-color: var(--bgColor);
+    color: black;
+    transition: 0.6s;
+}
+
+body.dark-mode {
+    --bgColor: black;
+    --fontColor: rgb(255, 255, 255);
+    --navColor: rgb(0, 0, 0);
+    --borderNav: rgb(255, 255, 255);
+}
+
+.activeDark {
+    color: white;
+}
+
+body.dark-mode .activeDark {
+    color: black;
+}
+
+header {
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    justify-content: space-around;
+    height: 100px;
+    border-bottom: 1px solid var(--borderNav);
+    background-color: var(--navColor);
+    color: var(--fontColor);
+}
+
+
+.navLogo > img {
+    width: 80px;
+    cursor: pointer;
+}
+
+.navLinks ul{
+    list-style: none;
+    display: flex;
+}
+
+.navLinks > ul > li > a {
+    transition: 0.6s;
+    padding: 15px;
+    text-decoration: none;  
+    color: var(--fontColor);
+    margin-left: 8px;
+}
+
+.navLinks > ul > li > a:hover {
+    transition: 0.6s;
+    padding: 15px;
+    background-color: var(--fontColor);
+    color: var(--navColor);
+    border-radius: 5px;
+}
+
+.navUtility > i{
+    transition: 0.6s;
+    cursor: pointer;
+    margin-left: 8px;
+    color: var(--fontColor);
+    padding: 6px;
+    border-radius: 40px;
+}
+
+
+.navUtility > i:hover {
+    transition: 0.6s;
+    background-color: var(--fontColor);
+    color: var(--navColor);
+    border-radius: 40px;
+    padding: 6px;
+}
+
+.searchBar {
+    display: flex;
+    position: absolute;
+    top: -300px;
+}
+
+.searchBar > input {
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: var(--fontColor);
+    border-radius: 5px;
+}
+
+.searchBar > input::placeholder {
+    color: var(--navColor);
+}
+.searchBar.active {
+    transition: 1s;
+    display: flex;
+    position: absolute;
+    top: 100px;
+    right: 70px;
+}
+
+.cartModal {
+    transition: 0.6s;
+    display: none;
+    position: fixed;
+    padding: 15px;
+    top: 110px;
+    right: 10px;
+    width: 300px;
+    background-color: var(--bgColor);
+    border: 1px solid var(--borderNav);
+    border-radius: 5px;
+    /* box-shadow: 0 2px 4px var(--fontColor); */
+    z-index: 1000;
+    color: var(--fontColor);
+}
+
+.cartModal h1 {
+    text-align: center;
+}
+
+.cartContent {
+    padding: 10px;
+}
+
+.clearCart {
+    transition: 0.6s;
+    padding: 6px;
+    background: var(--bgColor);
+    border: 1px solid var(--borderNav);
+    color: var(--fontColor);
+    border-radius: 5px;
+}
+
+
+.clearCart:hover {
+    transition: 0.6s;
+    padding: 6px;
+    background: var(--fontColor);
+    border: 1px solid var(--borderNav);
+    color: var(--navColor);
+    border-radius: 5px;
+}
+
+.closeCartModalBtn {
+    cursor: pointer;
+    font-size: 20px;
+    background: none;
+    border: none;
+}
