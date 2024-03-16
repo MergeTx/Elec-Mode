@@ -1,0 +1,33 @@
+.modal {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Inicialmente, o modal está fora da tela */
+    width: 300px;
+    height: 100%;
+    background-color: var(--navColor);
+    transition: right 0.5s ease; /* Adiciona uma transição suave para o movimento do modal */
+    z-index: 999; /* Certifique-se de que o modal esteja na parte superior */
+    padding: 20px;
+    box-shadow: 0 0 10px var(--fontColor); /* Adiciona uma sombra para efeito de destaque */
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.cardProdCarrinho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--fontColor);
+    border-radius: 5px;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.cardImgCarrinho {
+    width: 80px;
+}
