@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url(nav.css);
+@import url(main.css);
+@import url(carrousel.css);
+@import url(carrinho.css);
+@import url(user.css);
+
+* {
+    font-family: poppins, 'sans-seriff';
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body.dark-mode {
+    --navColor: rgb(24, 24, 24);
+    --fontColor: white;
+    --fontHoverColor: rgb(177, 177, 177);
+    --hoverColor: rgb(78, 78, 78);
+    --searchColor: rgb(39, 39, 39);
+    --btnCardColor: rgb(4, 221, 4);
+    --btnCardHover: rgb(2, 168, 2);
+}
+
+body {
+    --navColor: white;
+    --fontColor: rgb(119, 119, 119);
+    --fontHoverColor: rgb(177, 177, 177);
+    --hoverColor: rgb(119, 119, 119);
+    --searchColor: rgb(245, 245, 245);
+    --btnCardColor: rgb(4, 221, 4);
+}
