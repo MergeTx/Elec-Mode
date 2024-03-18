@@ -1,7 +1,6 @@
-// Carrossel.js
 var Carrossel = (function() {
-    var images, currentImageIndex, totalImages, leftArrow, rightArrow;
-    var intervalId; // Variável para armazenar o ID do intervalo
+    var images, currentImageIndex, totalImages, leftArrow, rightArrow, indicadoresContainer;
+    var intervalId; 
 
     function init() {
         images = document.querySelectorAll('.mainCarrousel .imgCarrousel');
@@ -9,50 +8,83 @@ var Carrossel = (function() {
         totalImages = images.length;
         leftArrow = document.querySelector('.seta-esquerda');
         rightArrow = document.querySelector('.seta-direita');
+        indicadoresContainer = document.querySelector('.indicadores');
 
         leftArrow.addEventListener('click', imagemAnterior);
         rightArrow.addEventListener('click', proximaImagem);
-        
+
         images.forEach(function(img, index) {
             if (index !== currentImageIndex) {
                 img.style.display = 'none';
             }
         });
 
-        // Inicia o intervalo para trocar as imagens automaticamente
+        criarIndicadores();
+        atualizarIndicadores();
+
         iniciarIntervalo();
     }
 
     function iniciarIntervalo() {
-        intervalId = setInterval(proximaImagem, 5000); // Troca a imagem a cada 5 segundos (5000 milissegundos)
+        intervalId = setInterval(proximaImagem, 5000); 
     }
 
     function pararIntervalo() {
-        clearInterval(intervalId); // Para o intervalo
+        clearInterval(intervalId); 
+    }
+
+    function criarIndicadores() {
+        for (var i = 0; i < totalImages; i++) {
+            var indicador = document.createElement('div');
+            indicador.classList.add('indicador');
+            indicador.addEventListener('click', function() {
+                var index = Array.from(indicadoresContainer.children).indexOf(this);
+                mostrarImagem(index);
+            });
+            indicadoresContainer.appendChild(indicador);
+        }
+
+        var indicadoresExtras = document.querySelectorAll('.indicador:nth-child(n+' + (totalImages + 1) + ')');
+        indicadoresExtras.forEach(function(indicadorExtra) {
+            indicadoresContainer.removeChild(indicadorExtra);
+        });
+    }
+
+    function atualizarIndicadores() {
+        var indicadores = document.querySelectorAll('.indicador');
+        indicadores.forEach(function(indicador, index) {
+            if (index === currentImageIndex) {
+                indicador.classList.add('ativo');
+            } else {
+                indicador.classList.remove('ativo');
+            }
+        });
     }
 
     function imagemAnterior() {
-        pararIntervalo(); // Para o intervalo ao clicar na seta esquerda
+        pararIntervalo(); 
         currentImageIndex = (currentImageIndex - 1 + totalImages) % totalImages;
-        atualizarImagem();
-        iniciarIntervalo(); // Reinicia o intervalo
+        mostrarImagem(currentImageIndex);
+        iniciarIntervalo(); 
     }
 
     function proximaImagem() {
         pararIntervalo(); 
         currentImageIndex = (currentImageIndex + 1) % totalImages;
-        atualizarImagem();
+        mostrarImagem(currentImageIndex);
         iniciarIntervalo(); 
     }
 
-    function atualizarImagem() {
-        images.forEach(function(img, index) {
-            if (index === currentImageIndex) {
+    function mostrarImagem(index) {
+        images.forEach(function(img, i) {
+            if (i === index) {
                 img.style.display = 'block';
             } else {
                 img.style.display = 'none';
             }
         });
+        currentImageIndex = index;
+        atualizarIndicadores();
     }
 
     return {

@@ -17,6 +17,7 @@ header {
 
 .navLogo > img {
     width: 100px;
+    cursor: pointer;
 }
 .navSearch > input {
     transition: 0.6s;

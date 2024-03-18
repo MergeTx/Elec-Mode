@@ -29,4 +29,5 @@ body {
     --hoverColor: rgb(119, 119, 119);
     --searchColor: rgb(245, 245, 245);
     --btnCardColor: rgb(4, 221, 4);
+    --btnCardHover: rgb(2, 168, 2);
 }

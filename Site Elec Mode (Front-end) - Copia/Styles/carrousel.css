@@ -25,3 +25,22 @@
     color: var(--fontHoverColor);
 }
 
+.indicadores {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.indicador {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--fontColor);
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.indicador.ativo {
+    background-color: var(--fontHoverColor);
+}
+
