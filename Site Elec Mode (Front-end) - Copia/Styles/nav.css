@@ -127,7 +127,8 @@ header {
 .navLine {
     width: 100%;
     height: 5px;
-    background: linear-gradient(45deg, purple, #5900BD, rgb(184, 0, 184));
+    background: rgb(128,0,128);
+    background: linear-gradient(90deg, rgba(128,0,128,1) 0%, rgba(89,0,189,1) 50%, rgba(184,0,184,1) 100%);
 }
 
 .font {
