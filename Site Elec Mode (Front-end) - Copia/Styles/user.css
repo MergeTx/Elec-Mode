@@ -13,10 +13,8 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    border: 2px solid;
-    border-image: linear-gradient(90deg, rgba(128,0,128,1) 0%, rgba(89,0,189,1) 50%, rgba(184,0,184,1) 100%);
-    border-image-slice: 1;
-    border-radius: 10px;
+    border: 1px solid var(--fontColor);
+    border-radius: 5px;
     box-shadow: 0px 0px 10px var(--navColor);
     
 }
