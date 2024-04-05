@@ -4,6 +4,7 @@
 @import url(carrousel.css);
 @import url(carrinho.css);
 @import url(user.css);
+@import url(Form/login.css);
 
 * {
     font-family: poppins, 'sans-seriff';
@@ -13,21 +14,27 @@
 }
 
 body.dark-mode {
-    --navColor: rgb(24, 24, 24);
-    --fontColor: white;
+    --navColor: #181818;
+    --fontColor: #d2d2d2;
     --fontHoverColor: rgb(177, 177, 177);
     --hoverColor: rgb(78, 78, 78);
     --searchColor: rgb(39, 39, 39);
     --btnCardColor: rgb(4, 221, 4);
     --btnCardHover: rgb(2, 168, 2);
+    --degrade: linear-gradient(45deg, #CC00FF, #9537AC, #B800B8);
+    --boxShadow: rgba(255, 255, 255, 0.25);
+    --titulo: white;
 }
 
 body {
     --navColor: white;
-    --fontColor: rgb(119, 119, 119);
+    --fontColor: #929292;
     --fontHoverColor: rgb(177, 177, 177);
     --hoverColor: rgb(119, 119, 119);
     --searchColor: rgb(245, 245, 245);
     --btnCardColor: rgb(4, 221, 4);
     --btnCardHover: rgb(2, 168, 2);
+    --degrade: linear-gradient(45deg, #CC00FF, #9537AC, #B800B8);
+    --boxShadow: rgba(0,0,0,0.25);
+    --titulo: black;
 }
