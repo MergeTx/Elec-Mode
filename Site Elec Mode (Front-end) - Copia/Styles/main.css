@@ -40,29 +40,18 @@ main {
     padding-bottom: 10px;
 }
 
-.produtos-wrapper::-webkit-scrollbar {
-    height: 12px;
-}
-
-.produtos-wrapper::-webkit-scrollbar-track{
-    background-color: var(--navColor);
-}
-
-.produtos-wrapper::-webkit-scrollbar-thumb {
-    background-color: var(--fontColor);
-}
-
 .containerProdutos {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
+    width: 100%;
 }
 
 .cardProdutosAfter {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 305px;
+    width: 355px;
     height: 475px;
     padding: 10px;
     background: var(--degrade);
@@ -70,33 +59,39 @@ main {
 }
 
 .cardProdutos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     flex: 0 0 auto;
     padding: 30px;
     border: none;
     background: var(--navColor);
     border-radius: 5px;
-    width: 300px;
+    width: 350px;
     height: 470px;
+    text-decoration: none;
 }
 
 .cardProdutos > .cardImg > img {
     cursor: pointer;
-    width: 100%;
+    width: 200px;
 }
 
 .desc {
     font-size: 14px;
     padding: 15px;
+    margin-bottom: 40px;
+}
+
+.cardFont {
+    color: var(--fontColor);
 }
 
 .cardLow {
     display: flex;
     justify-content: space-between;
-}
-
-.cardFont {
-    padding: 15px;
-    color: var(--fontColor);
+    align-items: end;
+    width: 100%;
 }
 
 .cardBtn {
@@ -122,8 +117,10 @@ main {
 }
 
 .containerProdutos > .seta-direita {
+    display: flex;
+    align-items: center;
     background: none;
-    border: 1px solid var(--fontColor);
+    border: 2px solid var(--fontColor);
     height: 20px;
     width: 20px;
     border-radius: 50%;
@@ -137,8 +134,10 @@ main {
 }
 
 .containerProdutos > .seta-esquerda {
+    display: flex;
+    align-items: center;
     background: none;
-    border: 1px solid var(--fontColor);
+    border: 2px solid var(--fontColor);
     height: 20px;
     width: 20px;
     border-radius: 50%;
@@ -149,4 +148,8 @@ main {
     transition: 1s;
     box-shadow: 0px 0px 30px var(--fontHoverColor);
     color: var(--fontHoverColor);
+}
+
+.star {
+    color: yellow;
 }

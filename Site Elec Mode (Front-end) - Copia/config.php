@@ -18,7 +18,7 @@ if ( !defined('ABSPATH') )
 	
 /** caminho no server para o sistema **/
 if ( !defined("BASEURL") )
-	define("BASEURL","/Site Elec Mode (Integração) - Copia/Site Elec Mode (Front-end) - Copia/");
+	define("BASEURL","/Elec-Mode-main/Site Elec Mode (Front-end) - Copia/");
 	
 /** caminho do arquivo de banco de dados **/
 if ( !defined("DBAPI") )

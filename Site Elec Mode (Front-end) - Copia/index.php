@@ -130,8 +130,8 @@ index();
                         <?php if ($produtos): ?>
                             <?php foreach ($produtos as $produto): ?>
                                 <div class="cardProdutosAfter">
-                                    <div class="cardProdutos">
-                                        <div class="cardImg">
+                                    <a class="cardProdutos" href="produtos/produtos.php">
+                                        <div class="cardImg" >
                                             <img src="Logo/Logo_Branca.png" alt="">
                                         </div>
                                         <div class="cardDesc">
@@ -139,13 +139,32 @@ index();
                                                 <?php echo $produto['nome_produto']; ?>
                                             </p>
                                         </div>
-                                        <div class="cardLow cardFont">
-                                            <p class="cardPreco">R$
-                                                <?php echo $produto['preco_produto']; ?>
-                                            </p>
-                                            <button class="cardBtn comprarBtn">COMPRAR</button>
+                                        <div class="cardLow">
+                                            <div class="cardPreco cardFont">
+                                                <p>
+                                                    R$999.00
+                                                </p>
+                                                <p class="cardPreco cardFont">R$
+                                                    <?php echo $produto['preco_produto']; ?>
+                                                </p>
+                                                <p>
+                                                    Á vista
+                                                </p>
+                                            </div>
+                                            <div class="cardFeedback">
+                                                <div class="cardStars">
+                                                    <i class='bx bxs-star star'></i>
+                                                    <i class='bx bxs-star star'></i>
+                                                    <i class='bx bxs-star star'></i>
+                                                    <i class='bx bxs-star star'></i>
+                                                    <i class='bx bxs-star star'></i>
+                                                </div>
+                                                <p class="cardFont">
+                                                    50% OFF
+                                                </p>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
                                     
                             <?php endforeach; ?>
@@ -170,12 +189,7 @@ index();
                             <div class="cardDesc">
                                 <p class="desc cardFont">TALTALTALTAL</p>
                             </div>
-                            <div class="cardLow cardFont">
-                                <p class="cardPreco">
-                                    R$100,00
-                                </p>
-                                <button class="cardBtn comprarBtn">COMPRAR</button>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
